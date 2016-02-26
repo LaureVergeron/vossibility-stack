@@ -16,3 +16,10 @@ This repository provides a usable stack to get started using `docker-compose`.
 ## Sample dashboard
 
 ![Sample dashboard](https://github.com/icecrime/vossibility-collector/raw/master/resources/dashboard.png)
+
+## Getting started
+
+First, you want to retrieve the submodules:
+``` sh
+$> git submodule update --init # clone vossibility-collector into collector
+```
