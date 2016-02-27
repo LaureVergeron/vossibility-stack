@@ -1,14 +1,16 @@
 # Elastic Search server is used for storing all of GitHub webhook data for the
 # monitored repositories.
 elasticsearch:
-    image: elasticsearch:1.7.1
+    image: elasticsearch:2.2.0
+    ports:
+        - 9200:9200
     volumes:
         - ./volumes/elasticsearch:/usr/share/elasticsearch/data/
 
 # Kibana dashboard provides the front-end to display data stored in the Elasic
 # Searh searver.
 kibana:
-    image: kibana:4.1.0
+    image: kibana:4.4.1
     links:
         - elasticsearch
     ports:
